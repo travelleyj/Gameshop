@@ -70,7 +70,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-    color:red;
+    color: #B29079;
 }
 
 #navbar li a.active::after,
@@ -78,7 +78,7 @@ body {
     content: "";
     width: 30%;
     height: 2px;
-    background-color: red;
+    background-color: #B29079;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -246,7 +246,11 @@ body {
 ul {
     list-style: none;
 }
+
+/*Footer */
 .footer {
+    padding: 10px 10px 0px 10px;
+    bottom: 0px;
     background: #303036;
     color: #d3d3d3;
     padding: 70px 0;

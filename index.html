@@ -10,36 +10,87 @@
     
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 
+
 </head>
 
 <body>
-    
-    <section id="header">
-        <a href="index.html" >
-        <img src="logo.png"></a>
+	<nav class="navbar">
+        <div class="brand-title"><a href="index.html"><img src="logo.jpg" style="height: 50px;width: auto;"></img></a></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+			<div style="position: relative;">
+				<ul>
 
-        <div>
-            <ul id="navbar">
-                <li><a class="active"href="index.html">Home</a></li>
-                <li><a href="Aboutus.html">Featured</a></li>
-                <li><a href="Shop.html">Shop</a></li>
-                <li><a href="Contactus.html">About Us</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <a href="#" id="close"><i class="far fa-times"></i></a>
-            </ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Featured</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Contact us</a></li>
+					<div class="desktop-nav">
+						<li><a href = "#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+					</div>
+
+					<div class="mobile-nav">
+						<li><a href="#">Shopping cart</a></li>
+					</div>
+					<li><a href = "#"><i class="fa-solid fa-user"><span> log in</span></i></a></li>
+
+				</ul>
+			</div>
         </div>
-        <div id="mobile">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-        </div>
-    </section>
+      </nav>
+	<main style="background-color:#414149;">
+		<div class="main-content" >
+			<div class="banner">
+				
+			</div>
+
+		</div>
+		<div class="first-content">
+			<div class="games-container">
+				<div class="game-slideshow">
+					<div class="mySlides fade">
+					<img src="media/Hogwarts_gamebanner.png" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+					<img src="media/DeadSpaceRemake_banner.png" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+					<img src="media/ForspokenPC_gamebanner.png" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<img src="media/DeadSpaceRemake_banner.png" style="width:100%">
+					</div>
+					
+					<a class="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next-btn" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				
+
+				</div>	
+				<br>
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(0)"></span>
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
 
 
+			</div>
+		</div>
+
+	</main>
     <div class="footer">
 		<div class="container">
 			<div class="row">
 				<div class="footer-col">
-					<h4>Send feedback</h4>
+					<p class="heading">Send feedback</p>
 					<ul>
 						<li><a href="#">Send feedback</a></li>
 						<li><a href="#">Find a store</a></li>
@@ -47,28 +98,71 @@
 					</ul>
 				</div>
 				<div class="footer-col">
-					<h4>Contact Us</h4>
+					<p class="heading">Contact Us</p>
 					<ul>
 						<li><a href="#">Contact us</a></li>
 					</ul>
 				</div>
 				<div class="footer-col">
-					<h4>About us</h4>
+					<p class="heading">About us</p>
 					<ul>
 						<li><a href="Aboutus.html">About us</a></li>
 						
 					</ul>
 				</div>
 				<div class="footer-col">
-					<h4>websites</h4>
+					<p class="heading">websites</p>
 					<div class="social-links">
 						<a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
 						<a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
 						<a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
-    <script src ="script.js"></script>
+	<script>
+		let slideIndex = 0;
+		let timeoutId = null;
+		const slides = document.getElementsByClassName("mySlides");
+		const dots = document.getElementsByClassName("dot");
+		
+		showSlides();
+		function currentSlide(index) {
+			 slideIndex = index;
+			 showSlides();
+		}
+	   function plusSlides(step) {
+		  
+		  if(step < 0) {
+			  slideIndex -= 3;
+			  
+			  if(slideIndex < 0) {
+				slideIndex = slides.length - 1;
+			  }
+		  }
+		  
+		  showSlides();
+	   }
+		function showSlides() {
+		  for(let i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+			dots[i].classList.remove('active');
+		  }
+		  slideIndex++;
+		  if(slideIndex > slides.length) {
+			slideIndex = 1
+		  }
+		  slides[slideIndex - 1].style.display = "block";
+		  dots[slideIndex - 1].classList.add('active');
+		   if(timeoutId) {
+			  clearTimeout(timeoutId);
+		   }
+		  timeoutId = setTimeout(showSlides, 10000); 
+		}
+	  </script>
+	<script src ="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>

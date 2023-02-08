@@ -15,7 +15,7 @@
 
 <body>
 	<nav class="navbar">
-        <div class="brand-title"><a href="index.html"><img src="logo.jpg" style="height: 50px;width: auto;"></img></a></div>
+        <div class="brand-title"><a href="index.html"><img src="media/logo.jpg" style="height: 50px;width: auto;"></img></a></div>
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -47,44 +47,65 @@
 	<main style="background-color:#414149;">
 		<div class="main-content" >
 			<div class="banner">
-				
+				<img src="media/banner-01.jpg" style="width: 100%;"></img>
 			</div>
 
 		</div>
 		<div class="first-content">
 			<div class="games-container">
 				<div class="game-slideshow">
-					<div class="mySlides fade">
+					<div class="slideshow">
 					<img src="media/Hogwarts_gamebanner.png" style="width:100%">
 					</div>
-					<div class="mySlides fade">
+					<div class="slideshow">
 					<img src="media/DeadSpaceRemake_banner.png" style="width:100%">
 					</div>
-					<div class="mySlides fade">
+					<div class="slideshow">
 					<img src="media/ForspokenPC_gamebanner.png" style="width:100%">
 					</div>
-					<div class="mySlides fade">
+					<div class="slideshow">
 						<img src="media/DeadSpaceRemake_banner.png" style="width:100%">
 					</div>
 					
-					<a class="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next-btn" onclick="plusSlides(1)">&#10095;</a>
+					<a class="prev-btn" onclick="nextslide(-1)">&#10094;</a>
+					<a class="next-btn" onclick="nextslide(1)">&#10095;</a>
 				</div>
 				
 
 				</div>	
 				<br>
 				<div style="text-align:center">
-					<span class="dot" onclick="currentSlide(0)"></span>
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="slideCount(0)"></span>
+					<span class="dot" onclick="slideCount(1)"></span>
+					<span class="dot" onclick="slideCount(2)"></span>
+					<span class="dot" onclick="slideCount(3)"></span>
 				</div>
 
 
 			</div>
-		</div>
+			<div class="games-in-slideshow">
+				<div class="gamebanner">
+					<img src="media/Hogwarts_gamebanner.png" width="100px" alt="">
+					<p class="desc"></p>
+				</div>
+				<div class="gamebanner">
+					<img src="media/DeadSpaceRemake_banner.png" width="100px" alt="">
+					<p class="desc"></p>
+				</div>
+				<div class="gamebanner">
+					<img src="/media/ForspokenPC_gamebanner.png" alt="">
+					<p class="desc"></p>
+				</div>
+				<div class="gamebanner">
+					<img src="media/DeadSpaceRemake_banner.png" alt="">
+					<p class="desc"></p>
+				</div>
+			</div>
 
+		</div>
+		<div class="featured-games" id="featured-games">
+
+		</div>
 	</main>
     <div class="footer">
 		<div class="container">
@@ -125,18 +146,18 @@
 	<script>
 		let slideIndex = 0;
 		let timeoutId = null;
-		const slides = document.getElementsByClassName("mySlides");
+		const slides = document.getElementsByClassName("slideshow");
 		const dots = document.getElementsByClassName("dot");
 		
 		showSlides();
-		function currentSlide(index) {
+		function slideCount(index) {
 			 slideIndex = index;
 			 showSlides();
 		}
-	   function plusSlides(step) {
+	   function nextslide(step) {
 		  
 		  if(step < 0) {
-			  slideIndex -= 3;
+			  slideIndex -= 2;
 			  
 			  if(slideIndex < 0) {
 				slideIndex = slides.length - 1;
@@ -162,6 +183,7 @@
 		  timeoutId = setTimeout(showSlides, 10000); 
 		}
 	  </script>
+	<script src="games-script.js"></script>
 	<script src ="script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

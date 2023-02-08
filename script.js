@@ -5,13 +5,19 @@ const nav = document.getElementById('navbar');
 
 	const toggleButton = document.getElementsByClassName('toggle-button')[0]
 	const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-		
+	const slideshow = document.getElementsByClassName('game-slideshow')[0]
 	toggleButton.addEventListener('click', () => {
 		navbarLinks.classList.toggle('active')
-		if(navbarLinks.style.display === 'none')
+		if(navbarLinks.style.display === 'none'){
 			navbarLinks.style.display = 'block';
+			slideshow.style.display = 'none';
+		}
 		else
+		{
 			navbarLinks.style.display = 'none';
+			slideshow.style.display = 'block';
+		}
+			
 	});
 
 

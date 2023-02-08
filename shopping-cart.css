@@ -1,0 +1,17 @@
+.cart-item-banner {
+    width: 70%;
+    background: #4e4e5c;
+    border: 1px solid #4e4e5c;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+    
+}
+.cart-item-banner img{
+    width: 100px;
+    height: 100px;
+}

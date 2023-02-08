@@ -31,7 +31,7 @@
 					<li><a href="#">About us</a></li>
 					<li><a href="#">Contact us</a></li>
 					<div class="desktop-nav">
-						<li><a href = "#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+						<li><a href = "shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
 					</div>
 
@@ -64,7 +64,7 @@
 					<img src="media/ForspokenPC_gamebanner.png" style="width:100%">
 					</div>
 					<div class="slideshow">
-						<img src="media/DeadSpaceRemake_banner.png" style="width:100%">
+						<img src="media/SpidermanRemastered-banner.jpg" style="width:100%">
 					</div>
 					
 					<a class="prev-btn" onclick="nextslide(-1)">&#10094;</a>
@@ -85,26 +85,42 @@
 			</div>
 			<div class="games-in-slideshow">
 				<div class="gamebanner">
-					<img src="media/Hogwarts_gamebanner.png" width="100px" alt="">
+					<img src="media/Hogwarts_gamebanner.png" width="100px" alt="Hogwarts Legacy Banner">
 					<p class="desc"></p>
 				</div>
 				<div class="gamebanner">
-					<img src="media/DeadSpaceRemake_banner.png" width="100px" alt="">
+					<img src="media/DeadSpaceRemake_banner.png" width="100px" alt="Dead Space Remake Banner">
 					<p class="desc"></p>
 				</div>
 				<div class="gamebanner">
-					<img src="/media/ForspokenPC_gamebanner.png" alt="">
+					<img src="/media/ForspokenPC_gamebanner.png" alt="Forspoken banner">
 					<p class="desc"></p>
 				</div>
 				<div class="gamebanner">
-					<img src="media/DeadSpaceRemake_banner.png" alt="">
+					<img src="media/SpidermanRemastered-banner.jpg" alt="SpidermanRemastered-banner">
 					<p class="desc"></p>
 				</div>
 			</div>
 
 		</div>
+		<br>
+		<h1>Check out our featured games!</h1><br>
+		<hr>
 		<div class="featured-games" id="featured-games">
 
+		</div>
+		<center><button class ="view-more-btn"><a href="featured-games.html">Check out more games</a></button></center>
+		
+		<br>
+		<h1>Play our games and earn points to get discount!</h1>
+		<hr>
+		<div class="mini-games">
+			<div class="spin-the-wheel">
+				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" hover loop autoplay></lottie-player>
+				<p class="desc">Spin the wheel and get a discount!</p>
+				<button class="play-btn"><a href="spinthewheel.html">Play</a></button>
+			</div>
 		</div>
 	</main>
     <div class="footer">
@@ -186,5 +202,7 @@
 	<script src="games-script.js"></script>
 	<script src ="script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="api.js"></script>
+	<script src="shoppingcart.js"></script>
 
 </body>

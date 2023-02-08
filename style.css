@@ -437,6 +437,7 @@ ul {
         padding:40px 40px;
     }
     #navbar {
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -450,6 +451,7 @@ ul {
         box-shadow: 0 40px 60px rgba(0,0,0,0.01);
         padding: 80px 0 0 10px;
         transition: 0.3s;
+        z-index: 999;
     }
     #navbar.active {
         right: 0px;
@@ -493,16 +495,19 @@ ul {
     }
 
 }
-.mySlides {
-    display: none
+.slideshow {
+    display: none;
 }
 img {
     vertical-align: middle;
 }
 .game-slideshow {
-    max-width: 500px;
+    max-width: 80%;
     position: relative;
     margin: auto;
+    z-index: 1;
+    display: block;
+    margin-top: 20px;
 }
 .prev-btn, .next-btn {
     cursor: pointer;
@@ -528,7 +533,6 @@ img {
     width: 10px;
     margin: 0 2px;
     background-color: #999999;
-    border-radius: 50%;
     display: inline-block;
 }
 .active,
@@ -537,4 +541,35 @@ img {
 }
 .games-container {
     position: relative;
+}
+.games-in-slideshow {
+    display: flex;
+    justify-content: center;;
+    max-width: 100%;
+}
+
+.games-in-slideshow .gamebanner img {
+    width: 100%;
+
+}
+#featured-games {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+#featured-games .game {
+
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: #000000 solid 1px;
+    border-radius: 10px;
 }

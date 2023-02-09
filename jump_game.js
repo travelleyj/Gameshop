@@ -1,4 +1,4 @@
-const API_KEY = "7cfce0c20636e6538a2f9094d23cfa7b346f6";
+const API_KEY = "63e5253f478852088da67f60";
 const date = new Date().toDateString();
 
 const getPlays = async () => {

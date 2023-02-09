@@ -32,20 +32,25 @@
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
-    <form action="" class="sign_up_form">
+    <form action="" class="sign_up_form" id="sign_up_form">
         <h2 class="title">Sign Up</h2>
             <div class="input_field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" id="username">
             </div>
             <div class="input_field">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" id="email">
             </div>
             <div class="input_field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" id="password">
             </div>
-            <input type="submit" value="Login" class="btn solid">
+            <input type="submit" value="Login" class="btn solid" id="sign_up_submit">
+            <a href="login.html"><p>Already have an account? Log in</p></a>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="signup.js"></script>
 </body>
+
+</html>

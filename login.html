@@ -20,9 +20,9 @@
         <div>
             <ul id="navbar">
                 <li><a class="active"href="index.html">Home</a></li>
-                <li><a href="Aboutus.html">Featured</a></li>
+                <li><a href="featured.html">Featured</a></li>
                 <li><a href="Shop.html">Shop</a></li>
-                <li><a href="Contactus.html">About Us</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
                 <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
@@ -40,14 +40,14 @@
                     <h2 class="title">Sign In</h2>
                         <div class="input_field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Username" id="username">
                         </div>
                         <div class="input_field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Password" id="password">
                         </div>
-                        <input type="submit" value="Login" class="btn solid">
-                        <a href="#"><p>Forgot your password? Click to reset password</p></a>
+                        <input type="submit" value="Login" class="btn solid" id="sign_in_submit">
+                        <a href="forgor.html"><p>Forgot your password? Click to reset password</p></a>
                         <p>Don't have an account?</p><a href="Signup.html">Register now</a>
                 </form>
                 
@@ -55,5 +55,6 @@
         </div>
     </div>
     
-    <script src ="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="login.js"></script>
 </body>

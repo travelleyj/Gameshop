@@ -4,7 +4,7 @@ const nav = document.getElementById('navbar');
 
 
 $(memberlist).ready(function() {
-    var APIKEY = "7cfce0c20636e6538a2f9094d23cfa7b346f6"
+    var APIKEY = "63e5253f478852088da67f60"
     getDetails();
     $("#change_password").hide();
     $("register_account").hide();

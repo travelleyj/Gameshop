@@ -1,7 +1,7 @@
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
-
+const navLinks = document.querySelectorAll('#navbar a');
 
 	const toggleButton = document.getElementsByClassName('toggle-button')[0]
 	const navbarLinks = document.getElementsByClassName('navbar-links')[0]

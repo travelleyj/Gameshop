@@ -47,11 +47,22 @@ if (bar) {
     })
 }
 
-if (close) {
-    close.addEventListener('click', ()=> {
-        nav.classList.add('active');
-    })
-}
+	const toggleButton = document.getElementsByClassName('toggle-button')[0]
+	const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+	const slideshow = document.getElementsByClassName('game-slideshow')[0]
+	toggleButton.addEventListener('click', () => {
+		navbarLinks.classList.toggle('active')
+		if(navbarLinks.style.display === 'none'){
+			navbarLinks.style.display = 'block';
+			slideshow.style.display = 'none';
+		}
+		else
+		{
+			navbarLinks.style.display = 'none';
+			slideshow.style.display = 'block';
+		}
+			
+	});
 
 const options = {
 	method: 'GET',
@@ -61,17 +72,7 @@ const options = {
 	}
 };
 
-fetch('https://valorant2.p.rapidapi.com/valorant_players', options)
+fetch('https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/Amartin743/psn', options)
 	.then(response => response.json())
-	.then(response => {
-        console.log(response[0])
-        const textDiv = document.getElementById('P')
-        const p = document.createElement('P')
-        const pText = document.createTextNode(response[0])
-        textDiv.appendChild(p);
-        p.appendChild(pText);
-    })
+	.then(response => console.log(response))
 	.catch(err => console.error(err));
-
-
-

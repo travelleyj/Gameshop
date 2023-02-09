@@ -1,7 +1,7 @@
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
-
+const navLinks = document.querySelectorAll('#navbar a');
 
 $(memberlist).ready(function() {
     var APIKEY = "63e5253f478852088da67f60"

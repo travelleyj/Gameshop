@@ -1,14 +1,6 @@
 var spinthewheel_attempts =[];
 var points =[];
-$(document).ready(function(){
-    const APIKEY = '63e5253f478852088da67f60';
-    getdatabase();
-    checkdatabase();
-    getdata();
-    function getdata(){
-        let points = $()
-    }
-});
+
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const gametxt = document.getElementById("game-txt");

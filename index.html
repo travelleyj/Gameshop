@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Background Images with Cover</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-    
+	<link href="spinthewheel.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 
 
@@ -117,10 +117,28 @@
 		<div class="mini-games">
 			<div class="spin-the-wheel">
 				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" hover loop autoplay></lottie-player>
-				<p class="desc">Spin the wheel and get a discount!</p>
-				<button class="play-btn"><a href="spinthewheel.html">Play</a></button>
+				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+				<p class="description">Spin the wheel</p>
+				<a class="play-btn" href="spinthewheel.html">Play</a>
 			</div>
+			<div class="spin-the-wheel">
+				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+				<p class="description">Jump</p>
+				<a class="play-btn" href="spinthewheel.html">Play</a>
+			</div>
+		</div>
+		<div class="spin-the-wheel-game">
+			<div class="wrapper">
+				<div class="container">
+				  <canvas id="wheel"></canvas>
+				  <button id="spin-btn">Spin</button>
+				  <img src="media/spin-the-wheel-arrow.png" class="game-spinthewheel-arrow" alt="spinner-arrow" />
+				</div>
+				<div id="game-txt">
+				</div>
+			  </div>
+
 		</div>
 	</main>
     <div class="footer">
@@ -160,23 +178,23 @@
 		</div>
 	</div>
 	<script>
-		let slideIndex = 0;
+		let slidenumber = 0;
 		let timeoutId = null;
 		const slides = document.getElementsByClassName("slideshow");
 		const dots = document.getElementsByClassName("dot");
 		
 		showSlides();
 		function slideCount(index) {
-			 slideIndex = index;
+			 slidenumber = index;
 			 showSlides();
 		}
 	   function nextslide(step) {
 		  
 		  if(step < 0) {
-			  slideIndex -= 2;
+			  slidenumber -= 2;
 			  
-			  if(slideIndex < 0) {
-				slideIndex = slides.length - 1;
+			  if(slidenumber < 0) {
+				slidenumber = slides.length - 1;
 			  }
 		  }
 		  
@@ -187,18 +205,21 @@
 			slides[i].style.display = "none";
 			dots[i].classList.remove('active');
 		  }
-		  slideIndex++;
-		  if(slideIndex > slides.length) {
-			slideIndex = 1
+		  slidenumber++;
+		  if(slidenumber > slides.length) {
+			slidenumber = 1
 		  }
-		  slides[slideIndex - 1].style.display = "block";
-		  dots[slideIndex - 1].classList.add('active');
+		  slides[slidenumber - 1].style.display = "block";
+		  dots[slidenumber - 1].classList.add('active');
 		   if(timeoutId) {
 			  clearTimeout(timeoutId);
 		   }
 		  timeoutId = setTimeout(showSlides, 10000); 
 		}
 	  </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+	<script src="spinthewheel.js"></script>
 	<script src="games-script.js"></script>
 	<script src ="script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

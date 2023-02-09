@@ -5,6 +5,7 @@ var games =[
     {name: "Hogwarts Legacy", price: 50, game_banner: "media/hogwarts_legacy game.webp", type: "in-stock"},
     {name: "Forspoken", price: 60, game_banner: "media/ForspokenPC_gamebanner.png", type: "in-stock"},
 
+
 ]
 for(let i = 0; i < games.length; i++){
     console.log(games[i].name, games[i].price, games[i].game_banner);
@@ -24,6 +25,8 @@ function addGames(){
             </div>
             `;
             gameList.appendChild(game);
+            if(i === 3)
+            break;
         }
         else if(games[i].type == "out-of-stock"){
             const game = document.createElement("div");
@@ -36,6 +39,8 @@ function addGames(){
             </div>
             `;
             gameList.appendChild(game);
+            if(i === 3)
+            break;
         }
     }
 }

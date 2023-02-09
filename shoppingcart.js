@@ -35,13 +35,10 @@ function printshoppingcart(){
             console.log(cart[i]);
             cartList.appendChild(cartItem);
             total += parseInt(cart[i].price.substring(4));
-            pricearray.push(parseInt(cart[i].price.substring(4)))
         }
+        const checkout = document.getElementsByClassName("checkout");
         const totalItem = document.createElement("div");
         totalItem.classList.add("total");
-        for(let i = 0; i < pricearray.length; i++){
-            totalItem.innerHtml =`${pricearray[i]}`;
-        }
         totalItem.innerHTML = `
         <p class="total-price">Total: SGD$${total}</p>`;
         cartList.appendChild(totalItem);

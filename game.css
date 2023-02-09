@@ -1,0 +1,48 @@
+
+#game-window {
+    width: 90%;
+    height: 500px;
+    background-color: #ddd;
+    position: relative;
+    margin: 50px auto;
+    border: 1px solid black;
+  }
+#dinosaur {
+width: 50px;
+height: 50px;
+background-color: green;
+position: absolute;
+bottom: 0;
+left: calc(50% - 25px);
+}
+
+#back-button {
+position: absolute;
+top: 20px;
+right: 20px;
+cursor: pointer;
+font-size: 20px;
+}
+
+#game-window {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+@media (max-width: 500px) {
+#game-window {
+    width: 80%;
+    height: 200px;
+}
+}
+
+.obstacle {
+width: 50px;
+height: 50px;
+background-color: red;
+position: absolute;
+bottom: 0;
+right: 100%;
+}

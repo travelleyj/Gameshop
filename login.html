@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Background Images with Cover</title>
+	<link href="login.css" rel="stylesheet" type="text/css" />
+    
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+</head>
+
+<body>
+    
+    <section id="header">
+        <a href="index.html" >
+        <img src="logo.png"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active"href="index.html">Home</a></li>
+                <li><a href="featured.html">Featured</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin_signup">
+                <form action="" class="sign_in_form">
+                    <h2 class="title">Sign In</h2>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" id="username">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" id="password">
+                        </div>
+                        <input type="submit" value="Login" class="btn solid" id="sign_in_submit">
+                        <a href="forgor.html"><p>Forgot your password? Click to reset password</p></a>
+                        <p>Don't have an account?</p><a href="Signup.html">Register now</a>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="login.js"></script>
+</body>

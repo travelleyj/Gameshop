@@ -99,17 +99,18 @@ $(document).ready(function ()
                 
             })
     }
-    
+
     function checkdatabase()
         {
             let i = 0;
             while(i < username.length)
             {
-    
+
                 if (username[i] == $("#username").val() && password[i] == $("#password").val())
                 {
                     console.log("Sign in successful");
                     authenticate = true;
+                    return authenticate;
                     localStorage.clear();
                     localStorage.setItem("username", JSON.stringify(username[i]));
                     localStorage.setItem("spinthewheel_attempt", spin_attempts[i]);

@@ -45,7 +45,7 @@ if (bar) {
     bar.addEventListener('click', ()=> {
         nav.classList.remove('active');
     })
-}
+	}
 
 	const toggleButton = document.getElementsByClassName('toggle-button')[0]
 	const navbarLinks = document.getElementsByClassName('navbar-links')[0]
@@ -64,15 +64,21 @@ if (bar) {
 			
 	});
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'cb9f5f458fmsh642e483c83a8823p120ff7jsn546df944fb80',
-		'X-RapidAPI-Host': 'valorant2.p.rapidapi.com'
-	}
-};
+const username = document.getElementById('username');
 
-fetch('https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/Amartin743/psn', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+if(localStorage.getItem('username') != null){
+	var user_name = JSON.parse(localStorage.getItem('username'));
+	console.log(user_name);
+	username.innerHTML = `${user_name}`;
+}
+const userlogo = document.getElementById('user-logo');
+userlogo.addEventListener('click', () => {
+	if(localStorage.getItem('username') != null){
+		alert("You are logged in!");
+
+	}
+	else{
+		alert("Please sign in to view your profile!");
+		
+	}
+});

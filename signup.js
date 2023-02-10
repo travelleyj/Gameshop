@@ -137,6 +137,7 @@ $(document).ready(function ()
                     console.log("Sign up successful");
                     checkdatabase = true;
                     doublecheck.push(authenticate);
+                    localStorage.setItem("username", username[i]);
                 }
                 i++;
             }

@@ -1,5 +1,5 @@
 # GameShop
-GameShop is a website which allows users to login and view and purchase games.
+GameShop is a website which allows users to login and view and purchase games for cheap.
 
 ## Purpose of webpages
 

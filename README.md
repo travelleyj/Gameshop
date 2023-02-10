@@ -71,3 +71,9 @@ GameShop is a website which allows users to login and view and purchase games fo
 ![image](https://user-images.githubusercontent.com/116325458/218128026-6e344434-9170-4115-be18-ea7f3d1070f9.png)
 ![image](https://user-images.githubusercontent.com/116325458/218128084-b71b5b12-9c6d-4e68-a6a0-b7bc9da00501.png)
 
+
+## Member Contributions
+Hadith: Front end dev, responsible in making the front end work
+Travelle: API developer and front end dev, responsible in making the backend and front end communication
+
+Both contributed in making and designing the whole website.

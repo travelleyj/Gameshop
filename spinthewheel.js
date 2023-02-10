@@ -1,5 +1,24 @@
-var spinthewheel_attempts =[];
-var points =[];
+const spinwheel_game = document.getElementsByClassName("spin-the-wheel-game");
+const spinwheelgame = document.getElementById("play-game");
+const playbtn = document.getElementById("spinthewheel-play-btn");
+const closebtn = document.getElementById("close-btn");
+
+
+game_attempts = localStorage.getItem("spinthewheel_attempt");
+
+
+playbtn.addEventListener("click", () => {
+        spinwheel_game[0].style.display = "block";
+        alert("Scroll down to play the game!")
+    });
+        
+closebtn.addEventListener("click", () => {
+    spinwheel_game[0].style.display = "none";});
+
+var username = localStorage.getItem("username");
+var spin_attempts = localStorage.getItem("spinthewheel_attempt");
+var points = localStorage.getItem("points");
+
 
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
@@ -18,12 +37,12 @@ const rotationValues = [
 const data = [16, 16, 16, 16, 16, 16];
 
 var Wheelcolours = [
-"#8b35bd",
-"#b163da",
-"#8b35bc",
-"#b163da",
-"#8b35bc",
-"#b163da",
+"#001675",
+"#414c7c",
+"#001675",
+"#414c7c",
+"#001675",
+"#414c7c",
 ];
 
 let spinthewheel = new Chart(wheel, {
@@ -68,7 +87,8 @@ for (let i of rotationValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
     gametxt.innerHTML = `<p>Congratulations, you won ${i.value} points!</p>`;
     spinBtn.disabled = false;
-    localStorage.setItem("points", parseInt(localStorage.getItem("points")) + i.value);
+    localStorage.setItem("points", parseInt(localStorage.getItem("points")) + i.value)
+    ;
     break;
     }
 }
@@ -85,16 +105,12 @@ spinBtn.addEventListener("click", () => {
         gametxt.innerHTML = `<p>Tries remaining: ${parseInt(localStorage.getItem("spin-the-wheel attempt"))}</p>`;
 
         let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
-        //Interval for rotation animation
+
         let rotationInterval = window.setInterval(() => {
-            //Set rotation for piechart
-            /*
-            Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count. Eventually on last rotation we rotate by 1 degree at a time.
-            */
+
             spinthewheel.options.rotation = spinthewheel.options.rotation + resultValue;
-            //Update chart with new value;
             spinthewheel.update();
-            //If rotation>360 reset it back to 0
+
             if (spinthewheel.options.rotation >= 360) {
             count += 1;
             resultValue -= 5;
@@ -107,6 +123,9 @@ spinBtn.addEventListener("click", () => {
             }
         }, 10);
         localStorage.setItem("spin-the-wheel attempt", parseInt(localStorage.getItem("spin-the-wheel attempt")) - 1);
+    }
+    if(localStorage.getItem("spin-the-wheel attempt") == null){
+        alert("Please log in first to play the game.");
     }
     else{
         gametxt.innerHTML = `<p>You have no more tries left.</p>`;

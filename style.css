@@ -705,3 +705,32 @@ main hr{
     text-decoration:none ;
     text-align: center;
 }
+.spin-the-wheel-game {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+#user-logo {
+    background:none;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+}
+#shop {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+}

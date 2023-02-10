@@ -38,6 +38,12 @@ GameShop is a website which allows users to login and view and purchase games fo
     * The shop webpage will show all available games sold by the website.
     * Users are able to add the games to the cart
 
+* contactus.html
+    * This allows user to 
+
+* AboutUs.html
+    * Allows user to see what the company is about, and also allow users to email us from the AboutUs.html page
+
 ## Technologies used
 
 > HTML

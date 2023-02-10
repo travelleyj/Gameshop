@@ -10,7 +10,7 @@ body {
 .navbar {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: #303036;
     color: white;
@@ -70,8 +70,6 @@ body {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        transition: 1s;
-
     }
     .mobile-nav {
         display: block;
@@ -145,31 +143,10 @@ p {
 
 body {
     width: 100%;
-    
 }
 * {
     font-family: 'Poppins', sans-serif;
 }
-
-.container{
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    background-size: cover;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-}
-.logincontainer{
-    margin: 1rem;
-    padding: 2rem;
-    width: 400px;
-    max-width: 400px;
-    background-color: #ffffff;
-}
-
 #header {
     display: flex;
     align-items: center;

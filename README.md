@@ -56,3 +56,18 @@ GameShop is a website which allows users to login and view and purchase games fo
 > https://twitter.com
 > https://instagram.com
 > https://facebook.com
+
+# Wireframes
+## Website
+![image](https://user-images.githubusercontent.com/116325458/218127568-6af626d8-7cb9-4ad5-8e49-29bf3bcf55cf.png)
+![image](https://user-images.githubusercontent.com/116325458/218127602-67776b91-98c8-4181-82cc-fd7e68d4df8d.png)
+![image](https://user-images.githubusercontent.com/116325458/218127674-3bd987ef-f1c5-4c8a-a95d-eb769e2a001a.png)
+![image](https://user-images.githubusercontent.com/116325458/218127728-69247bda-4d70-46f8-893d-bf6a2d7a36e2.png)
+![image](https://user-images.githubusercontent.com/116325458/218127781-904aafa5-9af3-44b7-9f17-8caff765a5af.png)
+![image](https://user-images.githubusercontent.com/116325458/218127838-2dbabe4b-5e72-438a-aa8c-f4b9565ebe90.png)
+![image](https://user-images.githubusercontent.com/116325458/218127876-8de7af7e-e001-4e61-9a0d-4d90bff4332b.png)
+
+## Mobile
+![image](https://user-images.githubusercontent.com/116325458/218128026-6e344434-9170-4115-be18-ea7f3d1070f9.png)
+![image](https://user-images.githubusercontent.com/116325458/218128084-b71b5b12-9c6d-4e68-a6a0-b7bc9da00501.png)
+

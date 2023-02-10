@@ -70,14 +70,14 @@ $(document).ready(function ()
         
         if (checkdatabase() == false)
         {
-            alert("Sign in failed.");
+            alert("Sign up failed.");
             console.log(authenticate);
         }
         else 
         {
-            alert("Sign in Successfully.");
+            alert("Sign up Successfully.");
             console.log(authenticate);  
-            window.location.href = "index.html"; //THIS ONE NEED HCANGE HOR
+            window.location.href = "index.html"; 
         }
 
         
@@ -107,8 +107,8 @@ $(document).ready(function ()
                     password.push(response[i].password); 
                     email.push(response[i].email);
                     points.push(response[i].points);
-                    spinthewheel_attempt.push(response[i].spinthewheel-attempt); 
-                    jump_attempt.push(response[i].jump-attempt);
+                    spinthewheel_attempt.push(response[i].spinthewheel_attempt); 
+                    jump_attempt.push(response[i].jump_attempt);
                 }
                 console.log(username);
                 console.log(password); 
@@ -125,16 +125,17 @@ $(document).ready(function ()
             while(i < username.length)
             {
     
-                if (username[i] == $("#email").val())
+                if (username[i] == $("#username").val() || email[i] == $("email").val())
                 {
-                    console.log("Sign in unsuccessful");
-                    authenticate = false;
+                    console.log("Sign up unsuccessful");
+                    checkdatabase = false;
                     doublecheck.push(authenticate);
+                    alert("Sign up unsuccessful");
                 }
                 else
                 {
-                    console.log("Sign in successful");
-                    authenticate = true;
+                    console.log("Sign up successful");
+                    checkdatabase = true;
                     doublecheck.push(authenticate);
                 }
                 i++;
@@ -147,12 +148,9 @@ $(document).ready(function ()
                     return false;
                 }
     
-    
             }
-    
-        
         }
-})
+});
 
 
 

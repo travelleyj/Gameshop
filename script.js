@@ -9,9 +9,9 @@ $(memberlist).ready(function() {
     $("#change_password").hide();
     $("register_account").hide();
 
-    $("#member_submit").on("Click", function(e)) {
+    $("#member_submit").on("Click", function(e) {
         e.preventDefault();
-    }
+    })
 
     let Username = $("member_username").val();
     let Password = $("member_password").val();
@@ -38,7 +38,7 @@ $(memberlist).ready(function() {
             $("#add_member_form").trigger("reset");
         }
     }
-}
+})
 
 
 if (bar) {

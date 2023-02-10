@@ -1,20 +1,5 @@
 # GameShop
-GameShop is a website which allows users to login and view and purchase games both on a monitor and on a phone.
-
-## Made with HTML, CSS, JS, and JQuery
-For the "Featured page", we used HTML and CSS to do <div> for  class which is then used to positioning of the navigation bar. Made the website responsive so that both users that are on a phone or computer are able to browse the website clearly, using @media.
-
-For the login and sign up page, we included HTML, CSS, JavaScript, and JQuery to build this webpage. By creating "id"s, we can use it for javascript which includes functions for getting and checking the database to see if the variables match with the existing data in the database which is stored in RestDB.io, if data does not exist in the database, users will be notified that they could not log in to the website.
-
-Users can register an account on the sign up page which stores value that the user has made and store it into an array which is then stored into the database. Furthermore, administrators who has access to the database are able to view and delete users.
-
-## Images used
-
-
-
-## Links
-
-
+GameShop is a website which allows users to login and view and purchase games.
 
 ## Purpose of webpages
 
@@ -49,10 +34,19 @@ Users can register an account on the sign up page which stores value that the us
 * shoppingcart.html
     * Users are able to view what they have placed into the cart and view the prices of each item and the total price that is due for payment.
 
+* shop.html
+    * The shop webpage will show all available games sold by the website.
+    * Users are able to add the games to the cart
 
 ## Technologies used
 
 > HTML
 > CSS
 > Javascript
+> JQuery
 
+## References
+
+> https://twitter.com
+> https://instagram.com
+> https://facebook.com

@@ -136,6 +136,7 @@ $(document).ready(function ()
                     console.log("Sign in successful");
                     authenticate = true;
                     doublecheck.push(authenticate);
+                    localStorage.setItem("username", username[i]);
                 }
                 i++;
             }

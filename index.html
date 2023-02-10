@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Background Images with Cover</title>
+	<title>GameShop: Home page</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link href="spinthewheel.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
@@ -25,20 +25,20 @@
 			<div style="position: relative;">
 				<ul>
 
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Featured</a></li>
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Contact us</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+					<li><a href="contactus.html">Contact us</a></li>
 					<div class="desktop-nav">
 						<li><a href = "shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
 					</div>
 
 					<div class="mobile-nav">
-						<li><a href="#">Shopping cart</a></li>
+						<li><a href="shoppingcart.html">Shopping cart</a></li>
 					</div>
-					<li><a href = "#"><i class="fa-solid fa-user"><span> log in</span></i></a></li>
+					<li><a href="login.html"><button id="user-logo"><i class="fa-solid fa-user"><span id="username"></span></i></button></li>
 
 				</ul>
 			</div>
@@ -81,7 +81,10 @@
 					<span class="dot" onclick="slideCount(3)"></span>
 				</div>
 
+<<<<<<< HEAD
     <id id="text">Hello
+=======
+>>>>>>> hadith
         
     </id>
 
@@ -122,21 +125,22 @@
 				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" loop autoplay></lottie-player>
 				<p class="description">Spin the wheel</p>
-				<a class="play-btn" href="spinthewheel.html">Play</a>
+				<button class="play-btn" id="spinthewheel-play-btn">Play</button>
 			</div>
 			<div class="spin-the-wheel">
 				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-				<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_QDuylsqPTR.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_JT7eJlHqgH.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
 				<p class="description">Jump</p>
-				<a class="play-btn" href="spinthewheel.html">Play</a>
+				<a class="play-btn" href="jump_game.html">Play</a>
 			</div>
 		</div>
-		<div class="spin-the-wheel-game">
+		<div class="spin-the-wheel-game" id="play-game">
 			<div class="wrapper">
 				<div class="container">
 				  <canvas id="wheel"></canvas>
 				  <button id="spin-btn">Spin</button>
 				  <img src="media/spin-the-wheel-arrow.png" class="game-spinthewheel-arrow" alt="spinner-arrow" />
+				  <button id="close-btn">&#10006;</button>
 				</div>
 				<div id="game-txt">
 				</div>
@@ -226,7 +230,6 @@
 	<script src="games-script.js"></script>
 	<script src ="script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="api.js"></script>
 	<script src="shoppingcart.js"></script>
 
 </body>

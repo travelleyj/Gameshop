@@ -1,4 +1,4 @@
-//all games
+
 
 var games =[
     {name: "Dead Space Remake", price: 40, game_banner: "media/DeadSpaceRemake_banner.png", type: "in-stock"},
@@ -17,9 +17,11 @@ var games =[
     {name: "Ark Survival Evolved", price: 25, game_banner: "media/ark_gamebanner.jpg", type: "in-stock"},
 
 ]
-addGames();
-function addGames(){
-    const gameList = document.getElementById("featured-games");
+
+
+addgamesinshop();
+function addgamesinshop(){
+    const gameList = document.getElementById("shop");
     for(let i = 0; i < games.length; i++){
         if(games[i].type == "in-stock"){
             const game = document.createElement("div");
@@ -32,8 +34,6 @@ function addGames(){
             </div>
             `;
             gameList.appendChild(game);
-            if(i === 3)
-            break;
         }
         else if(games[i].type == "out-of-stock"){
             const game = document.createElement("div");
@@ -46,9 +46,7 @@ function addGames(){
             </div>
             `;
             gameList.appendChild(game);
-            if(i === 3)
             break;
         }
     }
 }
-

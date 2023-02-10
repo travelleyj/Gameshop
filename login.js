@@ -1,6 +1,7 @@
 var username = [];
 var password = [];
-
+var spin_attempts = [];
+var points = [];
 $(document).ready(function () 
 {
     const APIKEY = "63e5253f478852088da67f60";
@@ -37,7 +38,6 @@ $(document).ready(function ()
         }
         else  {
             alert("Login failed.");
-            console.log(authenticate);
         }
 
         let settings =
@@ -92,10 +92,11 @@ $(document).ready(function ()
                 for (let i = 0; i < response.length; i++) 
                 {
                     username.push(response[i].username);
-                    password.push(response[i].password);  
+                    password.push(response[i].password);
+                    spin_attempts.push(response[i]["spinthewheel-attempts"]);
+                    points.push(response[i].points);
                 }
-                console.log(username);
-                console.log(password); 
+                
             })
     }
     
@@ -109,7 +110,11 @@ $(document).ready(function ()
                 {
                     console.log("Sign in successful");
                     authenticate = true;
-                    return authenticate
+                    localStorage.clear();
+                    localStorage.setItem("username", JSON.stringify(username[i]));
+                    localStorage.setItem("spinthewheel_attempt", spin_attempts[i]);
+                    localStorage.setItem("points", points[i]);
+                    return authenticate;
                 }
                 else
                 {
@@ -120,5 +125,8 @@ $(document).ready(function ()
             }
         }
 })
+
+
+
 
 
